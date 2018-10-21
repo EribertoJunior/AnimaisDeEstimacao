@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FormularioAnimalActivity"
+            android:label="@string/title_activity_formulario_animal"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.school.cesar.projeto.crudanimaisdeestimao.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
