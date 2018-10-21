@@ -10,7 +10,6 @@ object AccessDatabase {
         return Room.databaseBuilder(
                 context,
                 AppDataBase::class.java,
-                context.getString(R.string.database)
-        ).allowMainThreadQueries().build()
+                context.getString(R.string.database)).allowMainThreadQueries().build()
     }
 }
