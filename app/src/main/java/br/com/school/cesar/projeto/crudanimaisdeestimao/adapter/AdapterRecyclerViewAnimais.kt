@@ -1,11 +1,13 @@
 package br.com.school.cesar.projeto.crudanimaisdeestimao.adapter
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import br.com.school.cesar.projeto.crudanimaisdeestimao.FormularioAnimalActivity
 import br.com.school.cesar.projeto.crudanimaisdeestimao.R
 import br.com.school.cesar.projeto.crudanimaisdeestimao.model.Animal
 import kotlinx.android.synthetic.main.animal_item.view.*
@@ -27,6 +29,8 @@ class AdapterRecyclerViewAnimais(
             // one) that an item has been selected.
             //mListener?.onListFragmentInteraction(item)
             Toast.makeText(v.context, item.nome, Toast.LENGTH_SHORT).show()
+
+            v.context.startActivity(Intent(v.context, FormularioAnimalActivity::class.java).putExtra("selecionado", item))
         }
     }
 
